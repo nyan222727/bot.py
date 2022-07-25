@@ -12,7 +12,7 @@ async def on_ready():
     
 @bot.command()
 async def ping ( ctx ):
-    await ctx.send ( f'{bot.latency*1000}(ms)' )
+    await ctx.send ( f'{round(bot.latency*1000)}(ms)' )
 
 
 bot.run ( jdata[ 'TOKEN' ] )
