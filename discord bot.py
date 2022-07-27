@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import json
+import os
 with open ( 'setting.json', 'r', encoding  = 'utf8' ) as jfile:
     jdata = json.load(jfile)
 
@@ -9,13 +10,14 @@ bot = commands.Bot( command_prefix = '[' )
 @bot.event
 async def on_ready():
     print (">>bot is online<<")
+
+for Filename in os.listdir('./cmds'):
+    if Filename.endswith ('.py'):
+        bot.load_extension(F'cmds.{Filename[:-3]}')
     
-@bot.command()
-async def ping ( ctx ):
-    await ctx.send ( f'{round(bot.latency*1000)}(ms)' )
+if __name__ == "__main__":
 
-
-bot.run ( jdata[ 'TOKEN' ] )
+    bot.run ( jdata[ 'TOKEN' ] )
 
 
 
