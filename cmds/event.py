@@ -7,7 +7,8 @@ from core.classes import Cog_Extension
 class Event(Cog_Extension):
     @commands.Cog.listener()
     async def on_message(self,msg):
-        if msg.content == 'apple':
+        keyword =['hi', 'yo', '你好']
+        if msg.content in keyword and msg.author != self.bot.user:
             await msg.channel.send('ap')
 
 def setup(bot):
