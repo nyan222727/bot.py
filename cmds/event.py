@@ -1,5 +1,5 @@
-from multiprocessing.pool import ApplyResult
 import discord
+from multiprocessing.pool import ApplyResult
 from discord.ext import commands
 import os
 from core.classes import Cog_Extension
