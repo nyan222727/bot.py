@@ -4,8 +4,8 @@ from core.classes import Cog_Extension
 
 class  React(Cog_Extension):
     @commands.command()
-    async def fuck(self,ctx):
-        await ctx.send('好色喔')
+    async def abc(self,ctx):
+        await ctx.send('123')
 
 def setup(bot):
     bot.add_cog (React(bot))
