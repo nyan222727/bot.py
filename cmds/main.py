@@ -9,7 +9,8 @@ class Main(Cog_Extension):
         
     @commands.command()
     async def sayd (self, ctx, msg):
-        await ctx.message.delete(msg)
+        await ctx.message.delete()
+        await ctx.send(msg)
 
 def setup(bot):
     bot.add_cog(Main(bot))
