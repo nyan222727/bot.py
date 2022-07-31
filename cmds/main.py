@@ -11,6 +11,10 @@ class Main(Cog_Extension):
     async def sayd (self, ctx, msg):
         await ctx.message.delete()
         await ctx.send(msg)
+        
+    @commands.command()
+    async def clean(self, ctx, num:int):
+        await ctx.channel.purge (limit = num+1)
 
 def setup(bot):
     bot.add_cog(Main(bot))
