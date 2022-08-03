@@ -15,8 +15,16 @@ class Task(Cog_Extension):
             while not self.bot.is_closed():
                 await self.channel.send('UWU')
                 await asyncio.sleep(5)
-        
         self.bg_task = self.bot.loop.create_task(interval())
+        
+        async def interval():
+            await self.bot.wait_until_ready()
+            self.channel = self.bot.get_channel(997312886588325961)
+            while not self.bot.is_closed():
+                await self.channel.send('UWU')
+                await asyncio.sleep(5)
+        
+
         
     @commands.command()
     async def set_channel(self, ctx, ch:int):
