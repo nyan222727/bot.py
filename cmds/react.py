@@ -13,5 +13,8 @@ class React(Cog_Extension):
     @commands.command()
     async def 圖片(self, ctx):
         await ctx.send(jdata['worship'])
+            
+
+        
 def setup(bot):
     bot.add_cog (React(bot))
