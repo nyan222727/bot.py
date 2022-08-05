@@ -20,7 +20,6 @@ class Task(Cog_Extension):
             await self.bot.wait_until_ready()
             self.channel = self.bot.get_channel(997312886588325961)
             while not self.bot.is_closed():
-                
                 now_time = datetime.datetime.now().strftime('%H%M')
                 with open('setting.json', 'r', encoding='utf8') as jfile:
                     jdate = json.load(jfile)
@@ -41,6 +40,7 @@ class Task(Cog_Extension):
     
     @commands.command()
     async def set_time(self, ctx, time):
+        self.counter = 0
         with open('setting.json', 'r', encoding='utf8') as jfile:
             jdate = json.load(jfile) 
         jdate['time'] = time
