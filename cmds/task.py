@@ -25,8 +25,8 @@ class Task(Cog_Extension):
                     jdate = json.load(jfile)
                 if now_time == jdate['time'] and self.counter == 0:
                     await self.channel.send('Task Working')
-                    await asyncio.sleep(1)
                     self.counter = 1
+                    await asyncio.sleep(1)
                 else:
                     await asyncio.sleep(1)
                     pass
