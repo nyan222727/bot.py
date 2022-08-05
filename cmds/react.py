@@ -11,8 +11,27 @@ class React(Cog_Extension):
         await ctx.send('123')
 
     @commands.command()
-    async def 圖片(self, ctx):
+    async def pic(self, ctx):
         await ctx.send(jdata['worship'])
+        
+#    @commands.command()
+#    async def pop(self, ctx, x:int, y:int):
+#        self.pop = []
+#        self.a = self.x
+#        for self.i in range(1, y+1):
+#            for self.j in range(1, x+1):
+#                self.pop = '||pop||'
+#                if self.a == x:
+#                    self.pop = ctx.send('\n')
+#        await ctx.send(self.pop)
+     
+    @commands.command()
+    async def pop(self, ctx, x:int, y:int):
+        for self.i in range(0, y):
+            await ctx.send('||pop||'*x)            
+
+
+
             
 
         
