@@ -16,19 +16,29 @@ class React(Cog_Extension):
         
 #    @commands.command()
 #    async def pop(self, ctx, x:int, y:int):
-#        self.pop = []
-#        self.a = self.x
+#        self.a = x
 #        for self.i in range(1, y+1):
 #            for self.j in range(1, x+1):
 #                self.pop = '||pop||'
-#                if self.a == x:
-#                    self.pop = ctx.send('\n')
+#                if self.a == self.j:
+#                    self.pop = '** **'
 #        await ctx.send(self.pop)
-     
+    
     @commands.command()
     async def pop(self, ctx, x:int, y:int):
-        for self.i in range(0, y):
-            await ctx.send('||pop||'*x)            
+        self.list = []
+        for i in range(0, y):
+            for j in range(0, x):
+                self.list.append('||pop||')
+                if x-1 == j:
+                    self.list.append('\n')
+                    self.a=''.join(self.list)
+        await ctx.send (self.a)
+     
+#    @commands.command()
+#    async def pop(self, ctx, x:int, y:int):
+#        for self.i in range(0, y):
+#            await ctx.send('||pop||'*x)            
 
 
 
