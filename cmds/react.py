@@ -8,7 +8,7 @@ with open ( 'setting.json', 'r', encoding  = 'utf8' ) as jfile:
 class React(Cog_Extension):
     @commands.command()
     async def abc(self,ctx):
-        await ctx.send('123')
+        await ctx.send('666')
 
     @commands.command()
     async def pic(self, ctx):
@@ -26,6 +26,9 @@ class React(Cog_Extension):
     
     @commands.command()
     async def pop(self, ctx, x:int, y:int):
+        if x>14 or y>14:
+            await ctx.send('x or y have to be less than 15')
+            return None
         self.list = []
         for i in range(0, y):
             for j in range(0, x):
@@ -33,7 +36,7 @@ class React(Cog_Extension):
                 if x-1 == j:
                     self.list.append('\n')
                     self.a=''.join(self.list)
-        await ctx.send (self.a)
+        await ctx.send(self.a)
      
 #    @commands.command()
 #    async def pop(self, ctx, x:int, y:int):
