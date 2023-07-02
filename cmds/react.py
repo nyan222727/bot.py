@@ -7,8 +7,8 @@ with open ( 'setting.json', 'r', encoding  = 'utf8' ) as jfile:
 
 class React(Cog_Extension):
     @commands.command()
-    async def abc(self,ctx):
-        await ctx.send('666')
+    async def hi(self,ctx):
+        await ctx.send('早安')
 
     @commands.command()
     async def pic(self, ctx):
